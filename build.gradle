@@ -25,3 +25,4 @@ sourceSets {
 }
 
 mainClassName = "Main"
+task stage(dependsOn: ['build', 'clean', 'run'])
