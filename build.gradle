@@ -24,5 +24,6 @@ sourceSets {
     }
 }
 
-mainClassName = "Main.class"
-task stage(dependsOn: ['build', 'clean', 'run'])
+mainClassName = "Main"
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
