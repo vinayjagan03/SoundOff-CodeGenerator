@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Generator gen = new Generator();
         port(8080);
-        get("/hello", (req, res) -> {
+        get("/", (req, res) -> {
             FileWriter writer = new FileWriter("numbers.txt", true);
             int val = gen.generateNum();
             writer.write(val + "\n");
