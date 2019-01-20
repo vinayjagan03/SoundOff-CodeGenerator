@@ -1,0 +1,29 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "com.sparkjava:spark-core:2.7.2"
+    compile "org.slf4j:slf4j-simple:1.7.21"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/res']
+        }
+    }
+}
+
+application {
+    mainClassName = "Main"
+}
