@@ -14,6 +14,7 @@ dependencies {
     compile "com.heroku.sdk:heroku-maven-plugin:0.4.4"
     compile "org.freemarker:freemarker:2.3.28"
     runtime files('src/main/res')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 sourceSets {
