@@ -5,8 +5,8 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'application'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 dependencies {
     compile "com.sparkjava:spark-core:2.7.2"
@@ -29,5 +29,6 @@ sourceSets {
 }
 
 mainClassName = "Main"
+
 task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+build.dependsOn.add("run")
