@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <style media="screen">
+
+    body{
+      background-color: #3E5622;
+      height: 1000px;
+      color: #AFF9A8;
+      font-family: 'Roboto', sans-serif, 'Roboto Black', 'Roboto Bold';
+      font-weight: 200;
+      font: 30px RobotoBlack, sans-serif;
+    }
+
+    #home{
+      top: 10px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      display:inLine;
+    }
+
+    #instructions{
+
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: auto;
+      position: absolute;
+      display:inline;
+      height: 200px;
+      top: 1000px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+    }
+
+    #theCanvas{
+      border-radius: 25px;
+      border: 10px solid #73AD21;
+      padding: 20px;
+      width: 550px;
+      height: 150px;
+      display:inline;
+
+    }
+    p{
+      color: #AFF9A8;
+      font-family: 'Roboto', sans-serif, 'Roboto Black', 'Roboto Bold';
+      font-weight: 200;
+      font: 40px RobotoBlack, sans-serif;
+    }
+
+    ul{
+      color: #AFF9A8;
+      font-family: 'Roboto', sans-serif, 'Roboto Black', 'Roboto Bold';
+      font-weight: 200;
+      font: 40px RobotoBlack, sans-serif;
+      list-style-type: disc;
+      padding-left: 300px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+    function scrollto(div)
+    {
+      $('html,body').animate(
+      {
+        scrollTop: $("#"+div).offset().top
+      },'slow');
+    }
+  </script>
+
+</head>
+
+
+<body>
+  <div id = "home">
+    <center>
+      <a href="https://sound-off.com" data-elementor-open-lightbox="">
+        <img width="225" height="164"
+        src="https://sound-off.com/wp-content/uploads/2018/09/SOUND-OFF-WHITE-300x218.png"
+        class="elementor-animation-shrink attachment-medium size-medium" alt=""
+        srcset="https://sound-off.com/wp-content/uploads/2018/09/SOUND-OFF-WHITE-300x218.png 300w,
+        https://sound-off.com/wp-content/uploads/2018/09/SOUND-OFF-WHITE-768x559.png 768w,
+        https://sound-off.com/wp-content/uploads/2018/09/SOUND-OFF-WHITE-1024x746.png 1024w"
+        sizes="(max-width: 300px) 100vw, 300px">
+      </a>
+      <h1>
+        Your unique code is:
+      </h1>
+      <a href="#instructions">
+        <canvas id="theCanvas" width="600" height="200" style="border:10px solid #ffffff;"></canvas>
+      </a>
+    </center>
+
+    <script type="text/javascript">
+      var c = document.getElementById("theCanvas");
+      var ctx = c.getContext("2d");
+      ctx.textAlign = "center";
+      ctx.fillStyle = '#AFF9A8';
+      ctx.font = "900 200px RobotoBlack, sans-serif";
+
+      ctx.fillText("${num}", 300, 165);
+
+    </script>
+    <center>
+      <p>Use this code here:</p>
+      <a href="https://sound-off.com" alt = "app link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/320px-Download_on_the_App_Store_Badge.svg.png"
+        alt="Apple Store logo" height="95px" width="320px">
+      </a>
+    </center>
+  </div>
+
+  <div id = "instructions">
+
+    <a id="instructions" class="smooth"></a>
+    <center><h1>Easily connect to specialists!</h1></center>
+    <ul>
+      <li>Download the Sound Off App</li>
+      <li>Use your secure code to create an anonymous account </li>
+      <li>Connect with medical professionals</li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>
