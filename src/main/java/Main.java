@@ -25,10 +25,15 @@ public class Main {
             while (result.length() < 3)
                 result = "0" + result;
 
+            String newStr = "";
+            for (char c : result.toCharArray())
+                newStr += c + " ";
             
+            newStr = newStr.substring(0, newStr.length() - 1);
+
             System.out.println(result);
 
-            return setUpTemplate(result);
+            return setUpTemplate(newStr);
         });
     }
 
